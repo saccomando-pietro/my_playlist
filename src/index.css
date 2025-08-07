@@ -1,0 +1,67 @@
+/* index.css o SongList.css migliorato */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f3f4f6, #e0f7fa);
+  color: #222;
+}
+
+.App {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #0d47a1;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.song-list-container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.song-card {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.song-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.song-card-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.song-card-info {
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.song-card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #212121;
+}
+
+.song-card-artist {
+  font-size: 1rem;
+  color: #555;
+  font-style: italic;
+}
