@@ -19,6 +19,120 @@ h1 {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
+/* index.css o SongList.css migliorato */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e3f2fd, #e0f7fa);
+  color: #222;
+  min-height: 100vh;
+}
+
+/* Contenitore principale */
+.App {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* Titolo */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #0d47a1;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Input di ricerca */
+.search-input {
+  padding: 12px 18px;
+  width: 300px;
+  max-width: 90%;
+  font-size: 1rem;
+  border: 2px solid #90caf9;
+  border-radius: 30px;
+  outline: none;
+  margin-bottom: 40px;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #0d47a1;
+  box-shadow: 0 0 8px rgba(13, 71, 161, 0.3);
+}
+
+/* Griglia responsiva */
+.song-list-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card del brano */
+.song-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.song-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Immagine album */
+.song-card-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.song-card:hover .song-card-image {
+  transform: scale(1.05);
+}
+
+/* Testo nella card */
+.song-card-info {
+  padding: 18px;
+  background-color: transparent;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.song-card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #0d47a1;
+}
+
+.song-card-artist {
+  font-size: 0.95rem;
+  color: #444;
+  font-style: italic;
+}
+
+/* Messaggio se non ci sono brani */
+.song-list-container p {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+
 .song-list-container {
   display: grid;
   grid-template-columns: repeat(4, minmax(220px, 1fr));

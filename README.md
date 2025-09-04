@@ -7,6 +7,7 @@
 ## 🚀 Funzionalità
 
 - Visualizzazione di una playlist musicale.
+- Possibilità di filtrare per artista, album o canzone
 - Componenti React modulari.
 - Dati recuperati tramite le API di Spotify.
 

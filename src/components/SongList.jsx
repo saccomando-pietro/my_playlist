@@ -1,11 +1,29 @@
+// SongList.js
 import SongCard from "./SongCard";
 
-const SongList = ({ playlist }) => {
+const SongList = ({ playlist, searchTerm }) => {
+  const filteredTracks = playlist.tracks.items.filter((item) => {
+    const track = item.track;
+    const artistNames = track.artists.map((artist) => artist.name).join(" ");
+    const albumName = track.album.name;
+    const trackName = track.name
+    const query = searchTerm.toLowerCase();
+
+    return (
+      artistNames.toLowerCase().includes(query) ||
+      albumName.toLowerCase().includes(query) ||
+      trackName.toLowerCase().includes(query)
+    );
+  });
+
   return (
     <div className="song-list-container">
-      {playlist.tracks.items.map((item, index) => (
+      {filteredTracks.map((item, index) => (
         <SongCard key={index} track={item.track} />
       ))}
+      {filteredTracks.length === 0 && (
+        <p>Nessun brano trovato.</p>
+      )}
     </div>
   );
 };
