@@ -1,6 +1,6 @@
 import React from 'react';
 import SongList from './components/SongList'; // Adjust the path as needed
-import playlistData from './components/playlist.json'; // Adjust the path as needed
+import playlistData from './data/playlist.json'; // Adjust the path as needed
 import './index.css'; // Importa il file CSS
 
 function App() {
