@@ -2,7 +2,7 @@
 import SongCard from "./SongCard";
 
 const SongList = ({ playlist, searchTerm }) => {
-  const filteredTracks = playlist.tracks.items.filter((item) => {
+  const filteredTracks = playlist.items.filter((item) => {
     const track = item.track;
     const artistNames = track.artists.map((artist) => artist.name).join(" ");
     const albumName = track.album.name;
